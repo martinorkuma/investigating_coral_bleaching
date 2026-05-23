@@ -1,0 +1,28 @@
+project:
+  name: investigating_coral_bleaching
+  region: Florida Keys
+  station_note: NOAA Coral Reef Watch 5 km Regional Virtual Station
+
+data:
+  raw_path: data/raw/Florida_Keys.csv
+  processed_path: data/processed/florida_keys_clean.csv
+
+outputs:
+  figures_dir: outputs/figures
+  tables_dir: outputs/tables
+  reports_dir: outputs/reports
+
+columns:
+  date: Date
+  latitude: Latitude
+  longitude: Longitude
+  sst: Sea_Surface_Temperature
+  hotspots: HotSpots
+  dhw: Degree_Heating_Weeks
+  bleaching_alert: Bleaching_Alert_Area
+
+analysis:
+  date_format: "%m/%d/%Y"
+  start_year: 1985
+  end_year: 2025
+  top_n_thermal_stress_days: 25
